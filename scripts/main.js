@@ -1,2 +1,7 @@
-// Import and invoke the ticket booth component function
+// Import functions from external modules
+import { TicketBooth } from './TicketBooth.js'
+
+// invoke functions
+TicketBooth();
+
 
