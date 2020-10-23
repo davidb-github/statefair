@@ -24,14 +24,16 @@ eventHub.addEventListener("click", clickEvent => {
         // dispatch rideTicketSelectedEvent event to eventHub
         eventHub.dispatchEvent(rideTicketSelectedEvent)
     }
+    // add if/else logic for foodTicket clickEvent
 })
 
 
-// render html to section element with attribute class="entry"
+// render html to <section> element with attribute class="entry"
 export const TicketBooth = () => {
     contentTarget.innerHTML = `
         <div class="ticketBooth">
           <button id="rideTicket">Ride Ticket</button>
+          <button id="foodTicket">Food Ticket</button>
         </div>
     `
 }
