@@ -35,7 +35,7 @@ eventHub.addEventListener("click", clickEvent => {
         console.log(foodTicketSelectedEvent)
         eventHub.dispatchEvent(foodTicketSelectedEvent)
     }
-    // add if/else logic for foodTicket clickEvent
+    // add if/else logic for games clickEvent
 
 })
 

@@ -15,6 +15,5 @@ export const FoodTicketHolders = () => {
         contentTarget.innerHTML += `
         <div class="person eater"> </div>
         `
-
     })
 }
