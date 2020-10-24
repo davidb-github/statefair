@@ -11,7 +11,7 @@ eventHub.addEventListener("click", clickEvent => {
     // debug
     console.log(clickEvent)
     
-    // ensure click has clickEvent.target.id of "rideTicket"
+    // ensure "click" has clickEvent.target.id of "rideTicket"
     if (clickEvent.target.id === "rideTicket") {
         // create custom event to describe what happened
         const rideTicketSelectedEvent = new CustomEvent("rideTicketSelected", {
@@ -19,12 +19,24 @@ eventHub.addEventListener("click", clickEvent => {
                 rideTicketSelected: clickEvent.target.value
             }
         })
-        // debug code
+        // debug
         console.log(rideTicketSelectedEvent)
         // dispatch rideTicketSelectedEvent event to eventHub
         eventHub.dispatchEvent(rideTicketSelectedEvent)
     }
+    // ensure "click" has clickEvent.target.id of "rideTicket"
+    else if (clickEvent.target.id === "foodTicket") {
+        const foodTicketSelectedEvent = new CustomEvent("foodTicketSelected", {
+            detail: {
+                foodTicketSelected: clickEvent.target.value
+            }
+        })
+        // debug
+        console.log(foodTicketSelectedEvent)
+        eventHub.dispatchEvent(foodTicketSelectedEvent)
+    }
     // add if/else logic for foodTicket clickEvent
+
 })
 
 
