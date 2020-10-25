@@ -35,8 +35,18 @@ eventHub.addEventListener("click", clickEvent => {
         console.log(foodTicketSelectedEvent)
         eventHub.dispatchEvent(foodTicketSelectedEvent)
     }
-    // add if/else logic for games clickEvent
-
+    // ensure "click" has clickEvent.target.id of "gameTicket"
+    else if (clickEvent.target.id === "gameTicket") {
+        const gameTicketSelectedEvent = new CustomEvent("gameTicketSelected", {
+            detail: {
+                gameTicketSelected: clickEvent.target.value
+            }
+         })
+        //  debug
+        console.log(gameTicketSelectedEvent)
+        // dispatch custom newly created event(gameTicketSelectedEvent)
+        eventHub.dispatchEvent(gameTicketSelectedEvent)
+    }
 })
 
 
@@ -46,6 +56,7 @@ export const TicketBooth = () => {
         <div class="ticketBooth">
           <button id="rideTicket">Ride Ticket</button>
           <button id="foodTicket">Food Ticket</button>
+          <button id="gameTicket">Game Ticket</button>
         </div>
     `
 }
