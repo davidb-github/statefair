@@ -46,6 +46,7 @@ export const TicketBooth = () => {
         <div class="ticketBooth">
           <button id="rideTicket">Ride Ticket</button>
           <button id="foodTicket">Food Ticket</button>
+          <button id="gameTicket">Game Ticket</button>
         </div>
     `
 }
